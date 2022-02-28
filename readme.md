@@ -18,3 +18,17 @@ They would like the website to look fun but professional, be easy to use and wor
 
 
 NOTE: 
+the .dockerignore and dockerfile are for use in my own website infrastructure and are not required to run the application. 
+
+To run this app clone the project to your local machine and use 
+```
+npm install
+```
+
+To launch the app after node has installed dependencies:
+```
+npm start
+```
+```
+npm run devmode
+```
