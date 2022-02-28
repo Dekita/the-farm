@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Include <head> partial -->
+<%- include('./partials/head') %>
+
+<!-- Page Body -->
+<body class="text-center d-flex flex-column h-100" style="overflow-y: scroll;">
+<!-- Include <navi> partial -->
+<%- include('./partials/nav') %>
+<!-- Begin page content -->
+<%- include(`./pages/${render_data.page_id}`) %>
+<!-- Include <footer> partial -->
+<%- include('./partials/footer') %>
+<!-- Include <foot> partial -->
+<%- include('./partials/foot') %>
+<!-- End <body> -->
+</body>
+
+<!-- End <html> -->
+</html>

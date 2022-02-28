@@ -1,0 +1,48 @@
+
+
+<% 
+const nav_pages = {
+    'index': {href: '/', text: 'Home'},
+    'park': {href: '/park', text: 'Park'},
+    'cafe': {href: '/cafe', text: 'Cafe'},
+    'zoo': {href: '/zoo', text: 'Petting Zoo'},
+    'trails': {href: '/trails', text: 'Trail Walks'},
+    'shop': {href: '/shop', text: 'Produce Shop'},
+};
+const nav_page_keys = Object.keys(nav_pages);
+const active_id = nav_page_keys.indexOf(render_data.page_id);
+console.log('active_id:', active_id, render_data.page_id)
+%> 
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-bistro">
+    <div class="container d-block">
+        <div class="row pt-0">
+            <div class="col-4 text-start pt-0 ps-0">
+                <a class="navbar-brand" href="/">
+                    <img src="img/the-farm/flamingtext-logo.png" class="mt-1" alt="The Farm's brand logo">
+                </a>
+            </div>
+            <div class="col-8 text-end pt-lg-2">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <% for (const [index, page_key] of nav_page_keys.entries()) { 
+                            const add_active = index === active_id ? 'active' : ''; 
+                            const nav_item = nav_pages[page_key]; %> 
+                            <a class="nav-link <%= add_active %>" href="<%= nav_item.href %>"><%= nav_item.text %></a>
+                        <% } %> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Include common header image -->
+<section id="mainheaderimage">
+    <div class="w-100 pt-5 px-3">
+        <img class="header-image" src="img/the-farm/pexels-monika-ludvigsen-924309.jpg" alt="Picture of the Red Bistro diner">
+    </div>
+</section>
