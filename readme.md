@@ -1,4 +1,4 @@
-Assessment instructions
+## Assessment instructions
 You are required to plan and design a website to meet a given brief, then produce a website from the design specification and upload and test the website.
 This is an open-book assessment which will take place under supervised and unsupervised conditions. 
 
@@ -17,7 +17,7 @@ Initially they want to advertise the location, opening times, goods and services
 They would like the website to look fun but professional, be easy to use and work on all modern browsers.
 
 
-NOTE: 
+## Notes: 
 the .dockerignore and dockerfile are for use in my own website infrastructure and are not required to run the application. 
 
 To run this app clone the project to your local machine and use 
@@ -29,6 +29,7 @@ To launch the app after node has installed dependencies:
 ```
 npm start
 ```
+OR
 ```
 npm run devmode
 ```
